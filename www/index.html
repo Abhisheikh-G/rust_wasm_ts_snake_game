@@ -5,22 +5,89 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Snake Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
     <style>
-    
-        .content-wrapper {
+        body {
+            margin: 0;  
+            font-family: "Open Sans"         
+        }
+        .container {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             height: 90vh;
         }
+        .container h1, h5 {
+            margin: 0;
+        }
+        .content-wrapper {
+          min-width: 300px;
+        }
+        .game-panel { 
+               
+            display: flex;
+            flex-direction: column;
+           
+        }
+        .game-panel button {
+            font-size: large;
+            width: 100%;
+            border-radius: 16px;
+            height: 30px;
+            margin-bottom: 1rem;
+            border: 1px solid black;
+            line-height: 5px;
+            text-decoration: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            background: white;
+            color: black;
+            transition: all .2s ease-in-out;
+        }
+        .game-panel button:hover {
+            background-color: black;
+            color: white;
+        }
+        .label {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;;
+        }
+
+        #snake-canvas {
+            min-width: 300px;
+        }
     </style>
 </head>
 <body>
-    <div class="content-wrapper">
-        Canvas
-        <canvas id="snake-canvas"></canvas>
+    
+    <div class="container">
+        <h1>snake game</h1>
+        <h5>Made with Typescript, Rust, & WebAssembly ❤️</h5>
+        <div class="content-wrapper">
+            <div class="game-panel">
+                <div class="label">
+                    <h2>
+                        Status:
+                    </h2>
+                    <h2 id="game-status">None</h2>
+                </div>
+                <div class="label">
+                    <h2>
+                        Points:
+                    </h2>
+                    <h2 id="game-points">0</h2>
+                </div>
+            <button id="game-control-btn">Play</button>
+               
+            </div>
+            <canvas id="snake-canvas"></canvas>
+        </div>
     </div>
+   
     <script src="./bootstrap.js"></script>
 </body>
 </html>
