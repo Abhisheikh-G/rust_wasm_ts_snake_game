@@ -19,12 +19,13 @@
             align-items: center;
             justify-content: center;
             height: 90vh;
+            width: auto;
         }
-        .container h1, h5 {
+        .container h1, h5, h6 {
             margin: 0;
         }
         .content-wrapper {
-          min-width: 300px;
+          max-width: 300px;
         }
         .game-panel { 
                
@@ -57,9 +58,7 @@
             width: 100%;;
         }
 
-        #snake-canvas {
-            min-width: 300px;
-        }
+     
     </style>
 </head>
 <body>
@@ -67,6 +66,7 @@
     <div class="container">
         <h1>snake game</h1>
         <h5>Made with Typescript, Rust, & WebAssembly ❤️</h5>
+        <h6>(keyboard required)</h6>
         <div class="content-wrapper">
             <div class="game-panel">
                 <div class="label">

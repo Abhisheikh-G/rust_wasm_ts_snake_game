@@ -1,7 +1,7 @@
 import init, { World, Direction, GameStatus } from "snake_game";
 
 init().then((wasm) => {
-  const CELL_SIZE = 30;
+  const CELL_SIZE = 22.5;
   const WORLD_WIDTH = 12;
   const SNAKE_SPAWN_IDX = Date.now() % (WORLD_WIDTH * WORLD_WIDTH);
 
